@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
-import '../global.css';
+
+
 
 export const metadata = {
     title: 'Thread',

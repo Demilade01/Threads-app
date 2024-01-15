@@ -6,6 +6,10 @@ const communitySchema = new mongoose.Schema({
     name: {type : String, required: true},
     image: String,
     bio: String,
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
     threads: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -14,7 +18,8 @@ const communitySchema = new mongoose.Schema({
     ],
     members: [
         {
-            type: mongoose.Schema.Types.ObjectId
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
         }
     ]
 });
